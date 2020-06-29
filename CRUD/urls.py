@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from rest_framework.urlpatterns import format_suffix_patterns
-from api import views
+# from rest_framework.urlpatterns import format_suffix_patterns
+from api.views import studentsList, StudentsDetail
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/',views.studentsList.as_view()),
+    # path('api/students/',views.studentsList.as_view()),
+    path('api/students_list/', studentsList.as_view(), name='students_list'),   # fetch, add data
+    path('api/students/<Adm_No>', StudentsDetail.as_view(), name='students_list'),
+    # path('api/register/<National_ID>', UserDetail.as_view(), name='register'),
 ]
+# fetch, add data
