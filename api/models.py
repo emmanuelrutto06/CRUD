@@ -6,7 +6,7 @@ class students(models.Model):
     lastname=models.CharField(max_length=24)
     student_id=models.IntegerField()
     stream=models.CharField(max_length=10, null=False)
-    Date_of_suspension=models.DateField(auto_now_add=False, auto_now=False, null=False)
+    # Date_of_suspension=models.DateField(auto_now_add=False, auto_now=False, null=False)
     return_date=models.DateField(auto_now_add=False, auto_now=False, null=False)
     timestamp = models.DateField(auto_now=True, auto_now_add=False, blank=True, null=False)
     Reason_of_suspension=models.CharField(max_length=2000, null=False)

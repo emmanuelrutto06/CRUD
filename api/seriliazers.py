@@ -2,8 +2,8 @@ from rest_framework import serializers
 from . models import students
 
 class studentsSerializer(serializers.ModelSerializer):
-    firstname=serializers.CharField(required=False)
-    lastname=serializers.CharField(required=False)
+    first_name=serializers.CharField(required=False)
+    last_name=serializers.CharField(required=False)
     # student_id=serializers.IntegerField(required=False)
     stream=serializers.CharField(required=False)
     Date_of_suspension=serializers.DateField(required=False)

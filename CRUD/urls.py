@@ -19,11 +19,11 @@ from django.urls import path
 from api.views import studentsList, StudentsDetail
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/students/',views.studentsList.as_view()),
     path('api/students_list/', studentsList.as_view(), name='students_list'),   # fetch, add data
     path('api/students/<Adm_No>', StudentsDetail.as_view(), name='students_list'),
-    # path('api/register/<National_ID>', UserDetail.as_view(), name='register'),
 ]
 # fetch, add data
